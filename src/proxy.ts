@@ -11,9 +11,9 @@ export function proxy(request: NextRequest) {
 		return NextResponse.redirect(new URL("/login", request.url));
 	}
 
-	if (pathname === "/login" && isAuthenticated) {
-		return NextResponse.redirect(new URL("/my-courses", request.url));
-	}
+	// if (pathname === "/login" && isAuthenticated) {
+	// 	return NextResponse.redirect(new URL("/my-courses", request.url));
+	// }
 
 	return NextResponse.next();
 }
