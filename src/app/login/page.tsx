@@ -93,8 +93,6 @@ export default function LoginPage() {
 				router.push("/my-courses");
 				router.refresh();
 			});
-
-			router.push("/my-courses");
 		}
 		catch {
 			setApiError(
