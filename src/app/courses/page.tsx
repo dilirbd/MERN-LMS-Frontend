@@ -2,7 +2,6 @@
 
 import { apiRequest } from "@/lib/apiHandler";
 import type { Course, Pagination } from "@/types/course";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
