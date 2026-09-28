@@ -1,27 +1,41 @@
 {
-  "name": "final-project-lms-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.3.5",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.5",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "name": "final-project-lms-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint"
+    },
+    "dependencies": {
+        "next": "16.3.5",
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+    },
+    "devDependencies": {
+        "@dprint/json": "^0.24.0",
+        "@dprint/typescript": "^0.96.1",
+        "@dreamsicle.io/stylelint-config-tailwindcss": "^1.2.2",
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "babel-plugin-react-compiler": "1.0.0",
+        "dprint": "^0.57.4",
+        "dprint-plugin-malva": "^0.16.0",
+        "eslint": "^9",
+        "eslint-config-next": "16.3.5",
+        "postcss": "^8.5.28",
+        "stylelint": "^17.15.0",
+        "stylelint-config-clean-order": "^10.0.0",
+        "stylelint-config-standard": "^40.0.0",
+        "stylelint-order": "^8.1.1",
+        "tailwindcss": "^4",
+        "typescript": "^5"
+    },
+    "allowScripts": {
+        "dprint@0.57.4": true,
+        "unrs-resolver@1.12.2": true
+    }
 }

@@ -1,0 +1,28 @@
+{
+    "typescript": {
+        "indentWidth": 4,
+        "useTabs": true,
+        "semiColons": "always",
+        "nextControlFlowPosition": "nextLine",
+        "trailingCommas": "onlyMultiLine"
+    },
+    "json": {
+        "indentWidth": 4,
+        "useTabs": true
+    },
+    "malva": {
+        "indentWidth": 4
+    },
+    "includes": [
+        "**/*.{ts,tsx,js,cjs,mjs,jsx,css,scss,sass,less,json}"
+    ],
+    "excludes": [
+        "**/node_modules",
+        "**/*-lock.json"
+    ],
+    "plugins": [
+        "./node_modules/@dprint/typescript/plugin.wasm",
+        "./node_modules/@dprint/json/plugin.wasm",
+        "./node_modules/dprint-plugin-malva/plugin.wasm"
+    ]
+}

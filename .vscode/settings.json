@@ -1,0 +1,13 @@
+{
+    "editor.detectIndentation": false,
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "explicit"
+    },
+    "stylelint.validate": [
+        "css",
+        "postcss"
+    ],
+    "css.validate": false,
+}
