@@ -40,8 +40,6 @@ export default function CoursesPage() {
 				pagination: Pagination;
 			}>(`/api/v1/courses/?${params.toString()}`);
 
-			console.log(`/api/v1/courses/?${params.toString()}`);
-
 			if (cancelled) return;
 
 			if (!response.success || !response.data) {
