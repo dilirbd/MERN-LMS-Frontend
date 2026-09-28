@@ -5,9 +5,7 @@ export function proxy(request: NextRequest) {
 
 	const { pathname } = request.nextUrl;
 
-	const isAuthenticated = Boolean(sessionToken);
-
-	if (pathname.startsWith("/my-courses") && !isAuthenticated) {
+	if (pathname.startsWith("/my-courses") && !sessionToken) {
 		return NextResponse.redirect(new URL("/login", request.url));
 	}
 
