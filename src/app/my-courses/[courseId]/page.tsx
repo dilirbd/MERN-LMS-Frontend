@@ -107,7 +107,7 @@ export default function MyCoursePage() {
 		setSuccess("");
 
 		const response = await apiRequest<CourseDetails>(
-			`/api/1/courses/my-courses/${courseId}/update-course`,
+			`/api/v1/courses/my-courses/${courseId}/update-course`,
 			{
 				method: "PATCH",
 				body: JSON.stringify({
