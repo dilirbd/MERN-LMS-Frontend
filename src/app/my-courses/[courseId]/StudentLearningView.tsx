@@ -712,12 +712,11 @@ export default function StudentLearningView({
 								<div className="relative aspect-video overflow-hidden">
 									{course.thumbnail
 										? (
-											<Image
+											// eslint-disable-next-line @next/next/no-img-element
+											<img
 												src={course.thumbnail}
 												alt={course.title}
-												fill
-												sizes="(max-width: 1024px) 100vw, 70vw"
-												className="object-contain"
+												className="absolute inset-0 h-full w-full object-contain"
 											/>
 										)
 										: (

@@ -145,12 +145,11 @@ export default function CoursesPage() {
 								<div className="relative aspect-video overflow-hidden border-b border-foreground">
 									{course.thumbnail
 										? (
-											<Image
+											// eslint-disable-next-line @next/next/no-img-element
+											<img
 												src={course.thumbnail}
 												alt={course.title}
-												fill
-												sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-												className="object-contain"
+												className="absolute inset-0 h-full w-full object-contain"
 											/>
 										)
 										: (
