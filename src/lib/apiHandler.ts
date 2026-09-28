@@ -22,8 +22,6 @@ export async function apiRequest<T>(
 			},
 		});
 
-		console.log(response);
-
 		let data: Partial<ApiResponse<T>> = {};
 
 		try {
