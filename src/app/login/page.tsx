@@ -18,7 +18,7 @@ export default function LoginPage() {
 		email: "",
 		password: "",
 	});
-	const { refreshUser } = useAuth();
+	const { user, refreshUser } = useAuth();
 
 	const [errors, setErrors] = useState<FormErrors>({});
 	const [apiError, setApiError] = useState("");
@@ -102,6 +102,7 @@ export default function LoginPage() {
 	}
 
 	useEffect(() => {
+		if (user) router.replace("/my-courses");
 		async function checkAuthentication() {
 			try {
 				const response = await apiRequest("/api/v1/auth/profile");
@@ -128,7 +129,7 @@ export default function LoginPage() {
 		return () => {
 			window.removeEventListener("pageshow", handlePageShow);
 		};
-	}, [router]);
+	}, [router, user]);
 
 	return (
 		<main className="flex min-h-screen items-center justify-center bg-background px-6 py-12 text-foreground">
