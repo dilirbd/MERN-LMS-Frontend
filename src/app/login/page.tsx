@@ -4,7 +4,7 @@ import { useAuth } from "@/context/AuthContext";
 import { apiRequest } from "@/lib/apiHandler";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 
 type FormData = {
 	email: string;
@@ -24,6 +24,7 @@ export default function LoginPage() {
 	const [apiError, setApiError] = useState("");
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const router = useRouter();
+	const [, startTransition] = useTransition();
 
 	function handleChange(field: keyof FormData, value: string) {
 		setFormData((previous) => ({
@@ -86,7 +87,12 @@ export default function LoginPage() {
 			}
 
 			console.log("Login successful:", response.data);
-			await refreshUser();
+
+			startTransition(async () => {
+				await refreshUser();
+				router.push("/my-courses");
+				router.refresh();
+			});
 
 			router.push("/my-courses");
 		}

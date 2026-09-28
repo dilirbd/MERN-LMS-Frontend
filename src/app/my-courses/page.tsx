@@ -35,7 +35,7 @@ type EnrollmentResponse = {
 };
 
 export default function DashboardPage() {
-	const { user, loading: authLoading } = useAuth();
+	const { user, loading } = useAuth();
 
 	const [enrollments, setEnrollments] = useState<Enrollment[] | null>(null);
 	const [error, setError] = useState("");
@@ -112,7 +112,7 @@ export default function DashboardPage() {
 		setPage(1);
 	}
 
-	if (authLoading) {
+	if (loading) {
 		return (
 			<main className="mx-auto max-w-7xl px-4 py-12">
 				<p>Loading...</p>
